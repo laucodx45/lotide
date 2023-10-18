@@ -21,3 +21,5 @@ tail(words);
 assertEqual(words.length, 3); // original array should still have 3 elements!
 assertEqual(result[0], "Lighthouse");
 assertEqual(result[1], "Labs");
+assertEqual(result.length, words.length - 1);
+assertEqual((tail(["One"]).length), 0);

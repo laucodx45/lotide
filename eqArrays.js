@@ -24,10 +24,9 @@ const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
     return false;
   }
+  
+  //compare array1 to array 2 using a loop
 
-  //When array length is the same, we can compare array1 and array 2 using one for loop
-  //If the for loop encounter one element that !== to the other array, it return false
-  //If that never happens that means all the element are the same, else we set result to true
   for (let i = 0; i < array1.length; i++) {
     if (array1[i] !== array2[i]) {
       return false;

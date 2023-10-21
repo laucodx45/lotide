@@ -26,15 +26,21 @@ const eqArrays = function(array1, array2) {
 /**
  * @param {Array source} @param2 {sub array} element to remove
  * process
- * 1. use a filter method to remove source
+ * 1. use a for loop to iterate source array
+ * 2. Inside the loop, check if the element in source array includes element in itemsToRemove array
+ * 3. .includes method
  * @output {Array} return array that does not contain source element
  */
 
 const without = function(sourceArr, itemsToRemoveArr) {
-  // Use filter method
-  return sourceArr.filter((element) => {
-    return !itemsToRemoveArr.includes(element);
-  });
+  let result = [];
+  // Use for loop
+  for (let i = 0; i < sourceArr.length; i++) {
+    if (!itemsToRemoveArr.includes(sourceArr[i])) {
+      result.push(sourceArr[i]);
+    }
+  }
+  return result;
 };
 
 assertArraysEqual(without([1, 2, 3], [1]), [2, 3]);

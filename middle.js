@@ -33,7 +33,12 @@ const middle = function(array) {
   let resultArr = [];
   let middleIndex = Math.floor(array.length / 2);
 
-  if (array.length <= 2 || array === null) {
+  // check if function have no argument
+  if (!array) {
+    return [];
+  }
+
+  if (array.length <= 2) {
     return [];
   }
 

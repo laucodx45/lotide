@@ -28,7 +28,7 @@ including nested arrays of elements, and return a "flattened" version of the arr
  * process
  * 1. create a for loop
  * 2. check if element is an array using Array.isArray()
- * 3. if element is an array, then use map method to push to resultArr
+ * 3. if element is an array, then use concat method to combine the array element into resultArr
  * Output Array that is flattened, eleminate sub arrays
  */
 
@@ -39,16 +39,14 @@ const flatten = function(array) {
   // For loop to iterate the array
   for (let i = 0; i < array.length; i++) {
 
-    // If the element in the array is not an array then push the element into resultArr 
+    // If the element in the array is not an array then push the element into resultArr
     if (!Array.isArray(array[i])) {
       resultArr.push(array[i]);
     }
     
-    // Else, the element is an array, use map method to push the element inside array[i] to the resultArr
+    // Else, the element is an array, combine the array with resultArr
     else {
-      array[i].map((element) => {
-        resultArr.push(element);
-      });
+      resultArr = resultArr.concat(array[i]);
     }
   }
   return resultArr;
@@ -64,4 +62,4 @@ assertArraysEqual(flatten([1, ["2", "3"], 4]), [1, "2", "3", 4]);
 let testArray = [1, 2, [3, 4], 5];
 flatten(testArray);
 // Check whether flatten function modify the original array argument
-console.log(testArray); 
+console.log(testArray);

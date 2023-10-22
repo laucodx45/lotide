@@ -38,6 +38,9 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-console.log(letterPositions("hello"));
-
-assertArra
+// Test Case 1: object property of "l" should have a value of [2, 3] indicating their position in the sentence
+assertArraysEqual(letterPositions("hello")["l"], [2, 3]);
+// Test Case 2: object property of "h" should have a value of [0]
+assertArraysEqual(letterPositions("hello")["h"], [0]);
+// Test Case 3; object property of "h" should have a value of [5], blank-space should not be counted
+assertArraysEqual(letterPositions("hello world")["w"], [5]);

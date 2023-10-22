@@ -21,13 +21,16 @@ const assertArraysEqual = function(arr1, arr2) {
 
 const letterPositions = function(sentence) {
   const results = {};
-  const sentenceWithoutSpace = sentence.replaceAll(' ', '');
-  // logic to update results here
-  for (let i = 0; i < sentenceWithoutSpace.length; i++) {
-  
-    const letter = sentenceWithoutSpace[i];
 
-    if (!results[letter]) {
+  // logic to update results here
+  for (let i = 0; i < sentence.length; i++) {
+  
+    const letter = sentence[i];
+
+    // if there's a blank space, skip to the next index 
+    if (letter === ' ') {
+      continue;
+    } else if (!results[letter]) {
       // If letter is not in the result property, assign that letter index in an array
       results[letter] = [i];
     } else {
@@ -43,4 +46,4 @@ assertArraysEqual(letterPositions("hello")["l"], [2, 3]);
 // Test Case 2: object property of "h" should have a value of [0]
 assertArraysEqual(letterPositions("hello")["h"], [0]);
 // Test Case 3; object property of "h" should have a value of [5], blank-space should not be counted
-assertArraysEqual(letterPositions("hello world")["w"], [5]);
+assertArraysEqual(letterPositions("hello world")["w"], [6]);

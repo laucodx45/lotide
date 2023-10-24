@@ -34,9 +34,9 @@ const results2 = map(words, (word) => word.slice(1));
 const results3 = map(words, (word) => word.length);
 console.log(results1);
 
-// Test Case 1: function should return the first letter of each word in array
+// Test Case 1: Testing if the function correctly returns the first letter of each word in the array
 assertArraysEqual(results1, ["g", "c", "t", "m", "t"]);
-// Test Case 2: function should return the the word expect first letter
+// Test Case 2: Testing if function correctly return the word with first letter removed
 assertArraysEqual((results2), ["round", "ontrol", "o", "ajor", "om"]);
-// Test Case 3: function should return the length of each word in words
+// Test Case 3: Testing if function correctly return the length of each word in words array
 assertArraysEqual((results3), [6, 7, 2, 5, 3]);

@@ -32,7 +32,9 @@ const takeUntil = function(array, callback) {
   // ...
   for (let i = 0; i < array.length; i++) {
     if (callback(array[i])) {
+      console.log(`stop at index ${i}`);
       return array.slice([0], [i]);
+      
     }
   }
 };
@@ -48,7 +50,7 @@ const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Re
 const results2 = takeUntil(data2, x => x === ',');
 console.log(results2);
 
-// Test Case 1: function should correctly return the array up untill element < 0, untill index 4
+// Test Case 1: function should correctly return the array up untill element < 0
 assertArraysEqual(takeUntil(data1, x => x < 0), [1, 2, 5, 7, 2]);
-// Test Case 2: function should correctly return the array up untill the element ",", untill index 4
+// Test Case 2: function should correctly return the array up untill the element ","
 assertArraysEqual(takeUntil(data2, x => x === ','), ["I've", "been", "to", "Hollywood"]);

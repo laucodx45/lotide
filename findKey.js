@@ -22,7 +22,6 @@ const findKey = (object, callback) => {
       return key;
     }
   }
-  return undefined;
 };
 
 // Test Case 1: function should return key "noma"
@@ -34,7 +33,7 @@ assertEqual(findKey({
   "Ora":       { stars: 2 },
   "Akelarre":  { stars: 3 }
 }, x => x.stars === 2), "noma");
-// Test Case 2: functio should return key "Akaleri"
+// Test Case 2: function should return key "Akaleri"
 assertEqual(findKey({
   "Blue Hill": { stars: 1 },
   "Akaleri":   { stars: 3 },
@@ -43,6 +42,15 @@ assertEqual(findKey({
   "Ora":       { stars: 2 },
   "Akelarre":  { stars: 3 }
 }, x => x.stars === 3), "Akaleri");
+// Test Case 3: function should return undefined
+assertEqual(findKey({
+  "Blue Hill": { stars: 1 },
+  "Akaleri":   { stars: 3 },
+  "noma":      { stars: 2 },
+  "elBulli":   { stars: 3 },
+  "Ora":       { stars: 2 },
+  "Akelarre":  { stars: 3 }
+}, x => x.stars === 4), undefined);
 
 
 

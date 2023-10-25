@@ -32,9 +32,7 @@ const takeUntil = function(array, callback) {
   // ...
   for (let i = 0; i < array.length; i++) {
     if (callback(array[i])) {
-      console.log(`stop at index ${i}`);
       return array.slice([0], [i]);
-      
     }
   }
 };

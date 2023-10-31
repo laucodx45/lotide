@@ -44,7 +44,7 @@ const convertObjToStr = function(Obj) {
   return result;
 };
 
-// Test Case 1: function should return expected object string 
+// Test Case 1: function should return expected object string
 assertEqual(convertObjToStr(countLetters("lighthouse in the house")), "l:1 i:2 g:1 h:4 t:2 o:2 u:2 s:2 e:3 n:1 ");
 // Test Case 2: function should return 1, there's only 1 H in the input argument
 assertEqual(countLetters("LHL")["H"], 1);

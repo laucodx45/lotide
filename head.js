@@ -1,5 +1,3 @@
-const assertEqual = require('./assertEqual');
-
 const head = function(array) {
   if (!Array.isArray(array)) {
     console.log('Input is not an array');

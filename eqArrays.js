@@ -9,7 +9,6 @@
  * @return Boolean whether the array is equal to each other
  */
 const eqArrays = function(array1, array2) {
-
   //Do they have the same length? If they don't return false
   if (array1.length !== array2.length) {
     return false;

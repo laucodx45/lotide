@@ -1,13 +1,24 @@
+const assert = require('chai').assert;
 const tail = require('../tail');
-const assertEqual = require('../assertEqual');
 
-// Test Case
+describe("#tail", () => {
 
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-const result = tail(words);
-assertEqual(words.length, 3); // original array should still have 3 elements!
-assertEqual(result[0], "Lighthouse"); // testing if the head function returns the new start index for tail array
-assertEqual(result[1], "Labs"); // second index of the tail array
-assertEqual(result.length, words.length - 1); // checking if the length is good
-assertEqual((tail(["One"]).length), 0); // checking whether the function still works with array with only one element
-assertEqual((tail([]).length), 0); // Input array with zero element
+  it("returns [1, 2] for [1, 2, 3]", () => {
+    assert.deepEqual(tail([1, 2, 3]), [2, 3]);
+  });
+
+  it("returns [] for []", () => {
+    assert.deepEqual(tail([]), []);
+  });
+
+  it("retuns [] for [1]", () => {
+    assert.deepEqual(tail([1]), []);
+  });
+
+  it("function should not modify the value of input argument [1, 2, 3]", () => {
+    const numArr = [1, 2 , 3];
+    tail(numArr);
+    assert.deepEqual(numArr, [1, 2, 3]);
+  });
+
+});

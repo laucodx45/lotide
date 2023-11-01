@@ -14,7 +14,7 @@ const middle = function(array) {
   let middleIndex = Math.floor(array.length / 2);
 
   // check if function have no argument
-  if (!array) return [];
+  if (!array || !Array.isArray(array)) return [];
   
   if (array.length <= 2) {
     return [];

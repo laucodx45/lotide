@@ -11,7 +11,7 @@ describe("#middle", () => {
     assert.deepEqual(middle([1]), []);
   });
 
-  it("returns [] for [1, 2] since there's no middle index", () => {
+  it("returns [] when the input array has two elements, since there is no middle index", () => {
     assert.deepEqual(middle([1, 2]), []);
   });
 

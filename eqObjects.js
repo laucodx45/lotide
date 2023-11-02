@@ -1,30 +1,6 @@
-const eqArrays = function(array1, array2) {
-  if (array1.length !== array2.length) {
-    return false;
-  }
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+const eqArrays = require('./eqArrays');
+const assertEqual = require('./assertEqual');
 
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: [${actual}] === [${expected}]`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: [${actual}] !== [${expected}]`);
-  }
-};
-
-/*Implement the definition for function eqObjects which will take in two objects
-and returns true or false, based on a perfect match
-Two objects are equal when:
-1. They have the same number of keys
-2. The value for each key in one obj is the same as value for the same key in the other obj
-
-*/
 /**
  *
  * @param {*} object1
@@ -58,6 +34,7 @@ const eqObjects = function(object1, object2) {
   return true;
 };
 
+// Test code
 const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
 const anotherMultiColorShirtObject = { size: "medium", colors: ["red", "blue"] };
 assertEqual(eqObjects(multiColorShirtObject  , anotherMultiColorShirtObject), true); // => true

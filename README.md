@@ -26,6 +26,12 @@ This project was created and published by me as part of my learnings at Lighthou
 
 The following functions are currently implemented:
 
+* `assertArraysEqual`: function that prints an appropriate message after comparing the two arrays
+
+* `assertEqual` : function that prints an appropriate message after using strict equality to comapare actual and expected results
+
+* `assertObjectsEqual` : function that takes in 2 objects and returns true if they are equal and false otherwise
+
 * `countLetters`: function takes in a sentence and returns a count of each of the letters in the sentence
 
 * `countOnly`: function that takes in a collection of items and returns a specific subset of those items

@@ -1,4 +1,4 @@
-const head = function(array) {
+const head = (array) => {
   if (!Array.isArray(array)) {
     console.log('Input is not an array');
     return;

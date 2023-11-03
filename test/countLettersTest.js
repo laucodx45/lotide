@@ -31,4 +31,5 @@ describe("#countLetters", () => {
       countLetters("");
     }, Error, 'Please enter a valid string into argument');
   });
+  
 });

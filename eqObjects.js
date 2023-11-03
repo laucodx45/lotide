@@ -1,14 +1,9 @@
-const eqArrays = require('./eqArrays');
-const assertEqual = require('./assertEqual');
-
+const {eqArrays} = require('./index');
+// 	function that takes in 2 objects and return true if they are equal and false otherwise.
 /**
- *
- * @param {*} object1
- * @param {*} object2
- * process
- * Return true if they have the same number of keys, compare the length of the keys array
- * Use a for of loop, if using key of object1 not return truthy then the two object have different value for the key
- * @returns boolean
+ * @param {object} object1
+ * @param {object} object2
+ * @returns true if they are equal and false otherwise.
  */
 
 const eqObjects = function(object1, object2) {
@@ -34,10 +29,4 @@ const eqObjects = function(object1, object2) {
   return true;
 };
 
-// Test code
-const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
-const anotherMultiColorShirtObject = { size: "medium", colors: ["red", "blue"] };
-assertEqual(eqObjects(multiColorShirtObject  , anotherMultiColorShirtObject), true); // => true
-
-const longSleeveMultiColorShirtObject = { size: "medium", colors: ["red", "blue"], sleeveLength: "long" };
-assertEqual(eqObjects(multiColorShirtObject  , longSleeveMultiColorShirtObject), false); // => false
+module.exports = eqObjects;

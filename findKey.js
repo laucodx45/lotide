@@ -1,19 +1,8 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: [${actual}] === [${expected}]`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: [${actual}] !== [${expected}]`);
-  }
-};
+// function that takes in an object and callback and returns the first key that meets the criteria specified in callback.
 /**
- * findKey should scan the object and return the first key for which the callback returns a truthy value
- * If no key is found, then it should return undefined
- * @param {*} object
- * @param {*} callback
- * process
- * Add for in loop to iterate object
- * Add if statemen inside loop to check whether passing object key into the callback argument returns a truthy value
- * If it returns a truthy value, return the key
+ * @param {object} object
+ * @param {*} callbackFn
+ * @returns the first key that meets the criteria specified in callback
  */
 
 const findKey = (object, callback) => {
@@ -24,33 +13,4 @@ const findKey = (object, callback) => {
   }
 };
 
-// Test Case 1: function should return key "noma"
-assertEqual(findKey({
-  "Blue Hill": { stars: 1 },
-  "Akaleri":   { stars: 3 },
-  "noma":      { stars: 2 },
-  "elBulli":   { stars: 3 },
-  "Ora":       { stars: 2 },
-  "Akelarre":  { stars: 3 }
-}, x => x.stars === 2), "noma");
-// Test Case 2: function should return key "Akaleri"
-assertEqual(findKey({
-  "Blue Hill": { stars: 1 },
-  "Akaleri":   { stars: 3 },
-  "noma":      { stars: 2 },
-  "elBulli":   { stars: 3 },
-  "Ora":       { stars: 2 },
-  "Akelarre":  { stars: 3 }
-}, x => x.stars === 3), "Akaleri");
-// Test Case 3: function should return undefined
-assertEqual(findKey({
-  "Blue Hill": { stars: 1 },
-  "Akaleri":   { stars: 3 },
-  "noma":      { stars: 2 },
-  "elBulli":   { stars: 3 },
-  "Ora":       { stars: 2 },
-  "Akelarre":  { stars: 3 }
-}, x => x.stars === 4), undefined);
-
-
-
+module.exports = findKey;

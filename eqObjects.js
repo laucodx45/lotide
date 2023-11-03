@@ -1,5 +1,5 @@
-const {eqArrays} = require('./index');
 // 	function that takes in 2 objects and return true if they are equal and false otherwise.
+const {eqArrays} = require('./index');
 /**
  * @param {object} object1
  * @param {object} object2

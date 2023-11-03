@@ -1,6 +1,6 @@
 /**
- * @param {*} string sentence - Input sentence
- * @output Object with letter frequencies
+ * @param {*} string sentence - Input sentence.
+ * @output Object with letter frequencies.
  */
 
 const countLetters = function(sentence) {

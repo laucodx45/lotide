@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@laucodx45/lotide",
   "version": "1.0.0",
-  "description": "lotide library project",
+  "description": "This lotide project is inspired by the Lodash projectm it is a utility library for JavaScript",
   "main": "index.js",
   "directories": {
     "test": "test"

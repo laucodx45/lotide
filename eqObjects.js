@@ -1,4 +1,4 @@
-const {eqArrays} = require('./index');
+const eqArrays = require('./eqArrays');
 /**
  * eqObjects takes in 2 objects and return true if they are equal and false otherwise.
  * @param {object} object1

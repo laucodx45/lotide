@@ -1,6 +1,5 @@
-/* countOnly will be given an array and an object.
-It will return an object containing counts of everything that the input object listed */
 /**
+ * countOnly will be given an array and an object, returna an object containing counts of everything that the input object listed
  * @param {*} array allItems - A collection of items in an array.
  * @param {*} object itemsToCount - A specific subset of items to count in the array.
  * @return An object that contains the count of the specified subset of items.

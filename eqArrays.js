@@ -1,5 +1,5 @@
-// Implement a function eqArrays which takes in two arrays and returns true or false, based on a perfect match.
 /**
+ * eqArrays takes in two arrays and returns true or false, based on a perfect match.
  * @param {*} {array} array1
  * @param {*} {array} array2
  * @returns {boolean} true or false, based on a perfect match.

@@ -8,7 +8,7 @@ const flatten = require('./flatten');
 const head = require('./head');
 const letterPositions = require('./letterPositions');
 const middle = require('./middle');
-const Map = require('./Map');
+const map = require('./map');
 const tail = require('./tail');
 const takeUntil = require('./takeUntil');
 const without = require('./without');
@@ -24,7 +24,7 @@ module.exports = {
   head,
   letterPositions,
   middle,
-  Map,
+  map,
   tail,
   takeUntil,
   without

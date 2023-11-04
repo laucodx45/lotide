@@ -12,7 +12,7 @@ const map = require('./map');
 const tail = require('./tail');
 const takeUntil = require('./takeUntil');
 const without = require('./without');
-// TODO: edit code documentation countLetters to findKey
+
 module.exports = {
   countLetters,
   countOnly,

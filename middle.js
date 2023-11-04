@@ -1,11 +1,7 @@
 /**
- * inpupt @param {Array}
- * process
- * set up a placeholder array
- * 1. if array length <= 2, simply return an empty array
- * 2. if array length is odd, the middle index will be Math.floor(array.length / 2)
- * 3. if array length is even, there's 2 middle index, they will be Math.floor(array.length / 2) and - 1 index
- * output @return {Array} middle
+ * middle takes in an array and returns middle most element of the array.
+ * @param {array} array
+ * @returns {array} middle most element of the array.
  */
 
 const middle = function(array) {

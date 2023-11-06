@@ -16,12 +16,14 @@ const eqObjects = function(object1, object2) {
   }
 
   for (const key of keyOfObj1) {
-    // Check if the value is an array
-    if (Array.isArray(object1[key])) {
-      // if the value array is not equal, return false
-      if (!eqArrays(object1[key], object2[key])) {
+    // check if object[key] is an object/array
+    if (typeof object1[key] === 'object') {
+      // if not an array, then it's an object for sure
+      if (!Array.isArray(object1[key])) {
+        return eqObjects(object1[key], object2[key]);
+      } else if (!eqArrays(object1[key], object2[key])) {
         return false;
-      } // if the value of the key in obj1 is not equal to obj2 return false
+      }
     } else if (object1[key] !== object2[key]) {
       return false;
     }

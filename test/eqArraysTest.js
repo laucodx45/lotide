@@ -26,4 +26,8 @@ describe("#eqArrays", () => {
   it("returns true for [1, [2, 3, [6, 7, [8, 9]]], 4, 5] and [1, [2, 3, [6, 7, [8, 9]]], 4, 5], testing nested arrays", () => {
     assert.strictEqual(eqArrays([1, [2, 3, [6, 7, [8, 9]]], 4, 5], [1, [2, 3, [6, 7, [8, 9]]], 4, 5]), true);
   });
+
+  it("returns false for [1, [2, 3, [6, 7, [8, 10]]], 4, 5] and [1, [2, 3, [6, 7, [8, 9]]], 4, 5], testing nested arrays", () => {
+    assert.strictEqual(eqArrays([1, [2, 3, [6, 7, [8, 10]]], 4, 5], [1, [2, 3, [6, 7, [8, 9]]], 4, 5]), false);
+  });
 });

@@ -20,7 +20,10 @@ const eqObjects = function(object1, object2) {
     if (typeof object1[key] === 'object') {
       // if not an array, then it's an object for sure
       if (!Array.isArray(object1[key])) {
-        return eqObjects(object1[key], object2[key]);
+        // if passing the object into eqObject return false then return false
+        if (!eqObjects(object1[key], object2[key])) {
+          return false;
+        }
       } else if (!eqArrays(object1[key], object2[key])) {
         return false;
       }

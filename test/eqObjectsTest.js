@@ -17,4 +17,12 @@ describe("#eqObjects", () => {
     assert.equal(eqObjects({ colors: "blue", size: "medium" }, { colors: "blue", size: "medium" }), true);
   });
 
+  it("returns false, object 1 and 2 have the different key value pair, testing nested objects", () => {
+    assert.equal(eqObjects({ a: { z: { b: {b: 1}} }, b: {b: { b:1 }} }, { a: { z: { b: {b: 2}} }, b: {b: { b:1 }} }), false);
+  });
+
+  it("returns true, obj 1 and 2 have the same key value pair, testing nested objects", () => {
+    assert.equal(eqObjects({ a: { z: { b: {b: 1}} }, b: {b: { b:1 }} }, { a: { z: { b: {b: 1}} }, b: {b: { b:1 }} }), true);
+  });
+
 });
